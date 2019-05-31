@@ -4,7 +4,7 @@ import CharacterCard from "./CharacterCard"
 
 const CharacterList = ({ characters }) => {
     return (
-      <div >
+      <div className="character-parent">
         {characters.map(character => (
           <CharacterCard character={character} key={character.name}/>
         ))}

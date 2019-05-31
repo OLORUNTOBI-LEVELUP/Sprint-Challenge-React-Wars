@@ -4,7 +4,7 @@ import "./StarWars.css"
 
 const CharacterCard = ({ character }) => {
     return (
-      <div >
+      <div className="character-card">
         <h1>{character.name}</h1>
         <p>Birth Year: {character.birth_year}</p>
         <p>Gender: {character.gender}</p>
