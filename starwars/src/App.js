@@ -23,18 +23,31 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        console.log(data)
+        this.setState({ 
+          starwarsChars: data.results,
+          next: data.next,
+          previous: data.previous
+         });
       })
       .catch(err => {
         throw new Error(err);
       });
   };
-
+  handleNext = url => {
+    this.getCharacters(url)
+  }
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
         <CharacterList characters={this.state.starwarsChars} />
+        <button onClick={() => this.handleNext(this.state.previous)}>
+            {'<'}
+          </button>
+        <button onClick={() => this.handleNext(this.state.next)}>
+            >
+          </button>
       </div>
     );
   }
