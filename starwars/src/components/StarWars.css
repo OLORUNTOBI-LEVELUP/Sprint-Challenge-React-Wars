@@ -1,0 +1,30 @@
+.character-parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  p {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 1.5rem
+  }
+  .character-card {
+    background: rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    color: white;
+    width: 16%;
+    padding: 2em;
+    margin: 2em;
+  }
+  
+  
+  .character-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+ 
+  
+  @media (max-width: 768px) {
+    .character-card {
+      width: 50%;
+    }
+  }
